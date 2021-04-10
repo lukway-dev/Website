@@ -1,0 +1,38 @@
+.header{
+  width: fit-content;
+  letter-spacing: 1px;
+  &_principal{
+    margin: 0;
+    font: $font-title;
+    color: $whitegreen;
+    &::selection{
+      color: $black;
+    }
+  }
+  &_secondary{
+    margin-bottom: 0;
+    color: $green-light;
+    font: $font-caption;
+    font-size: 1.5rem;
+  }
+  &_text{
+    font-size: 1.1rem;
+    .highlight{
+      font-size: inherit;
+    }
+  }
+}
+
+@media screen and (max-width: 425px){
+  .header{
+    &_principal{
+      font-size: 2.5rem;
+    }
+    &_secondary{
+      font-size: 1.25rem;
+    }
+    &_text{
+      font-size: 1.05rem;
+    }
+  }
+}

@@ -1,0 +1,212 @@
+.nav{
+  width: 100%;
+  height: 50px;
+  background-color: $black;
+  box-shadow: 0 -25px 50px #000000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99999;
+  animation: appear_to_top .3s ease-out;
+  &_logo{
+    height: 100%;
+    padding: 10px;
+    img{
+      height: 100%;
+    }
+  }
+  &_button_container{
+    background-color: $black;
+    width: fit-content;
+    height: 100%;
+    display: flex;
+  }
+  &_button{
+    height: 100%;
+    outline: none;
+    border: none;
+    padding: 0 15px;
+    background: unset;
+    display: flex;
+    align-items: center;
+    font: $font-highlight;
+    color: $whitegreen;
+    text-decoration: none;
+    position: relative;
+    cursor: pointer;
+    transition: background-color .3s, color .3s;
+    &:hover{
+      background-color: $whitegreen;
+      color: $black;
+    }
+  }
+  .current_page{
+    background-color: $whitegreen;
+    color: $black;
+    pointer-events: none;
+    &::after{
+      content: "";
+      width: 5px;
+      height: 5px;
+      border-radius: 2px;
+      background-color: $green-dark;
+      position: absolute;
+      left: calc(50% - 2px);
+      bottom: 7px;
+    }
+    &-contact{
+      @extend .current_page;
+      pointer-events: all;
+    }
+  }
+  .contact{
+    width: 40px;
+    height: fit-content;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 60px;
+    right: calc(50% - 20px);
+    font-size: 20px;
+    animation: contact_to_top .3s ease-out;
+    &_link{
+      width: 40px;
+      height: 40px;
+      border-radius: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: $white;
+      text-decoration: none;
+      transition: box-shadow .3s, transform .3s;
+      &:hover{
+        box-shadow: 0 0 30px $whitegreen-shadow;
+        transform: scale(1.1);
+      }
+    }
+    .instagram{
+      background-color: $instagram;
+      background-image: linear-gradient($instagram-gradient);
+    }
+    .email{
+      background-color: $email;
+      font-size: .9em;
+    }
+    .linkedin{
+      background-color: $linkedin;
+    }
+    .curriculum{
+      background-color: $green-light;
+      color: $black-light;
+      img{
+        height: 75%;
+      }
+      i{
+        margin: 0 auto;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px){
+  .nav{
+    justify-content: center;
+    animation: none;
+    &_button_container{
+      width: 100%;
+      height: 50px;
+      position: fixed;
+      left: 0;
+      bottom: 0;
+      box-shadow: 0 25px 50px #000000;
+      animation: appear_to_bottom .3s ease-out;
+    }
+    &_button{
+      width: 25%;
+      justify-content: center;
+    }
+    .current_page{
+      &::after{
+        bottom: unset;
+        top: 7px;
+      }
+    }
+    .contact{
+      top: unset;
+      bottom: 60px;
+      animation: contact_to_bottom .3s ease-out;
+    }
+  }
+}
+@media screen and (max-width: 668px){
+  .nav{
+    &_button{
+      padding: 0 5px;
+      font-size: .95rem;
+    }
+  }
+}
+@media screen and (max-width: 425px){
+  .nav{
+    &_button{
+      font-size: .85rem;
+    }
+  }
+}
+
+@keyframes appear_to_top {
+  0%{
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  100%{
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+@keyframes appear_to_bottom {
+  0%{
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  100%{
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+@keyframes contact_to_top {
+  0%{
+    opacity: 0;
+    transform: translateY(-25%);
+  }
+  35%{
+    opacity: 1;
+    transform: translateY(15%);
+  }
+  100%{
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+@keyframes contact_to_bottom {
+  0%{
+    opacity: 0;
+    transform: translateY(25%);
+  }
+  35%{
+    opacity: 1;
+    transform: translateY(-15%);
+  }
+  100%{
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+

@@ -1,0 +1,159 @@
+*{
+  box-sizing: border-box;
+  &::selection{
+    background-color: $green-light;
+    color: $green-dark;
+  }
+}
+
+body{
+  height: fit-content;
+  min-height: calc(100vh - 50px);
+  margin: 0;
+  border: 0;
+  padding: 0;
+  background-color: $black;
+  background-image: linear-gradient($green-gradient);
+  font: $font-text;
+  color: $green-text;
+  &::-webkit-scrollbar{
+    width: 6px;
+    &-thumb{
+      background-color: $whitegreen;
+    }
+    // &-track{
+    //   background-color: rgba($color: #000000, $alpha: .1);
+    // }
+  }
+}
+
+main{
+  width: 100%;
+  height: fit-content;
+  min-height: calc(100vh - 130px);
+  margin: 50px auto 0;
+}
+
+img{
+  &::selection{
+    background-color: #80ff9127;
+  }
+}
+
+.caption{
+  color: $whitegreen;
+  &::selection{
+    color: $black;
+  }
+}
+
+.link{
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  color: $whitegreen;
+  font: $font-highlight;
+  text-decoration: none;
+  position: relative;
+  &:hover{
+    &::after{
+      transform: scaleX(1);
+      transform-origin: left center;
+    }
+  }
+  &::after{
+    content: "";
+    width: 100%;
+    height: 3px;
+    border-radius: 2px;
+    background-color: $whitegreen;
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    transform: scaleX(0);
+    transform-origin: right center;
+    transition: transform .3s;
+  }
+  &:before{
+    content: "";
+    width: 100%;
+    height: 3px;
+    border-radius: 2px;
+    background-color: $green-light;
+    opacity: .5;
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+  }
+  &::selection{
+    color: $black;
+  }
+  &-with-icon{
+    @extend .link;
+    &:hover{
+      .link_logo{
+        transform: translateX(120%);
+      }
+      .redirect_logo{
+        transform: translateX(130%);
+      }
+    }
+    &::after{
+      width: calc(100% - 1.5rem);
+      bottom: 0px;
+    }
+    &::before{
+      width: calc(100% - 1.5rem);
+      bottom: 0px;
+    }
+    .link_logo_container{
+      width: 1.2rem;
+      height: 1.3rem;
+      margin-top: 5px;
+      margin-left: 5px;
+      display: inline-block;
+      position: relative;
+      overflow: hidden;
+      .link_logo{
+        width: inherit;
+        position: absolute;
+        right: 0;
+        transition: transform .2s;
+      }
+      .redirect_logo{
+        position: absolute;
+        right: 120%;
+        transition: transform .2s;
+      }
+    }
+  }
+}
+
+
+.highlight{
+  color: $whitegreen;
+  font: $font-highlight;
+  &::selection{
+    color: $black;
+  }
+}
+
+
+@media screen and (max-width: 425px){
+  .logo_container{
+    &-large{
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      gap: 20px;
+    }
+    &-medium, &-small{
+      width: 100%;
+    }
+    &-duo{
+      width: 50%;
+    }
+  }
+  .caption{
+    font-size: 1.5rem;
+  }
+}

@@ -1,0 +1,157 @@
+.projects_container{
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  justify-items: center;
+  align-items: center;
+}
+
+.project{
+  width: 400px;
+  height: 250px;
+  border: 3px solid $whitegreen-dark;
+  border-top: 0;
+  background-color: $whitegreen-dark;
+  color: $black;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  &:hover{
+    .project_info{
+      transform: translateY(0%);
+    }
+  }
+  &_title{
+    width: 100%;
+    height: 22px;
+    background-color: $whitegreen-dark;
+    font-weight: bolder;
+    line-height: 22px;
+  }
+  &_icon{
+    height: 16px;
+    position: absolute;
+    top: 3px;
+    left: 2px;
+  }
+  &_img{
+    height: calc(100% - 22px);
+    width: 100%;
+    object-fit: cover;
+  }
+  &_info{
+    width: 100%;
+    height: calc(100% - 20px);
+    padding: 25px;
+    background-color: $black;
+    background-image: linear-gradient($black-light 75%, $whitegreen-dark 25%);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    top: 22px;
+    transform: translateY(100%);
+    transition: transform .3s;
+    .link{
+      width: fit-content;
+    }
+    .github{
+      &:hover{
+        i{
+          color: $whitegreen;
+        }
+      }
+      &::after{
+        background-color: $whitegreen;
+      }
+      &:before{
+        background-color: $whitegreen;
+      }
+    }
+    .see{
+      color: $green-ultra-light;
+      i{
+        margin-left: 5px;
+        color: $green-ultra-light;
+        opacity: .5;
+        transition: color .3s, opacity .3s;
+      }
+      &:hover{
+        i{
+          color: $green-ultra-light;
+          opacity: 1;
+        }
+      }
+      &::after{
+        background-color: $green-ultra-light;
+      }
+      &:before{
+        background-color: $green-ultra-light;
+      }
+    }
+    .about{
+      color: $green-dark;
+      i{
+        margin-left: 5px;
+        color: $green-dark;
+        opacity: .5;
+        transition: color .3s, opacity .3s;
+      }
+      &:hover{
+        i{
+          color: $green-dark;
+          opacity: 1;
+        }
+      }
+      &::after{
+        background-color: $green-dark;
+      }
+      &::before{
+        background-color: $green-dark;
+      }
+    }
+  }
+}
+
+.phrase{
+  color: $whitegreen;
+  font: $font-phrase;
+  text-align: center;
+  overflow: hidden;
+}
+
+@media screen and (max-width: 768px){
+  .projects_container{
+    grid-template-columns: 1fr;
+  }
+}
+@media screen and (max-width: 425px){
+  .project{
+    width: 100%;
+    height: 210px;
+    &_info{
+      padding: 20px;
+      background-image: linear-gradient($black-light 70%, $whitegreen-dark 30%);
+    }
+  }
+  .phrase{
+    font-size: 1.1rem;
+  }
+}
+@media screen and (max-width: 425px){
+  .project{
+    height: 210px;
+  }
+}
+@media screen and (max-width: 375px){
+  .project{
+    height: 200px;
+  }
+}
+@media screen and (max-width: 320px){
+  .project{
+    height: 180px;
+  }
+}
