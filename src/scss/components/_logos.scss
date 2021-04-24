@@ -29,7 +29,9 @@
     column-gap: 30px;
   }
   .home_logo_container{
+    grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(2, 1fr);
+    grid-auto-flow: unset;
     gap: 40px;
   }
 }

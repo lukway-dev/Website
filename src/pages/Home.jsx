@@ -1,7 +1,7 @@
 import { Helmet } from 'react-helmet'
 import Layout from '../components/Layout'
 import Header from '../components/Header'
-import Redirect from '../components/Redirect'
+import CallToAction from '../components/CallToAction'
 
 const logos = [
   {
@@ -69,7 +69,7 @@ const Home = () => {
         }
       </div>
 
-      <Redirect />
+      <CallToAction />
     </Layout>
   )
 }

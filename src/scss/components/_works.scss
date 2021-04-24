@@ -10,9 +10,9 @@
 .project{
   width: 400px;
   height: 250px;
-  border: 3px solid $whitegreen-dark;
+  border: 3px solid $white;
   border-top: 0;
-  background-color: $whitegreen-dark;
+  background-color: $white;
   color: $black;
   text-align: center;
   position: relative;
@@ -25,7 +25,7 @@
   &_title{
     width: 100%;
     height: 22px;
-    background-color: $whitegreen-dark;
+    background-color: $white;
     font-weight: bolder;
     line-height: 22px;
   }
@@ -45,7 +45,7 @@
     height: calc(100% - 20px);
     padding: 25px;
     background-color: $black;
-    background-image: linear-gradient($black-light 75%, $whitegreen-dark 25%);
+    background-image: linear-gradient($black 75%, $white 25%);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -60,14 +60,14 @@
     .github{
       &:hover{
         i{
-          color: $whitegreen;
+          color: $white;
         }
       }
       &::after{
-        background-color: $whitegreen;
+        background-color: $white;
       }
       &:before{
-        background-color: $whitegreen;
+        background-color: $white;
       }
     }
     .see{
@@ -116,7 +116,7 @@
 }
 
 .phrase{
-  color: $whitegreen;
+  color: $white;
   font: $font-phrase;
   text-align: center;
   overflow: hidden;
@@ -133,7 +133,7 @@
     height: 210px;
     &_info{
       padding: 20px;
-      background-image: linear-gradient($black-light 70%, $whitegreen-dark 30%);
+      background-image: linear-gradient($black-light 70%, $white-dark 30%);
     }
   }
   .phrase{

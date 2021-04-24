@@ -1,9 +1,9 @@
 /* eslint-disable camelcase */
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import Home from './pages/Home'
 import About_Me from './pages/About_Me'
 import Portfolio from './pages/Portfolio'
-import Error_404 from './pages/Error_404'
+// import Error_404 from './pages/Error_404'
 import Website from './pages/projects/Website'
 import MemoryGame from './pages/projects/MemoryGame'
 import JavaScriptQuiz from './pages/projects/JavaScriptQuiz'
@@ -18,7 +18,7 @@ const Routes = () => {
         <Route exact path='/portfolio/website' component={Website} />
         <Route exact path='/portfolio/memory_game' component={MemoryGame} />
         <Route exact path='/portfolio/javascript_quiz' component={JavaScriptQuiz} />
-        <Route path='*' component={Error_404} />
+        {/* <Route component={Error_404} /> */}
       </Switch>
     </Router>
   )

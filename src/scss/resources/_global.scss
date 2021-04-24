@@ -16,10 +16,11 @@ body{
   background-image: linear-gradient($green-gradient);
   font: $font-text;
   color: $green-text;
+  overflow-x: hidden;
   &::-webkit-scrollbar{
     width: 6px;
     &-thumb{
-      background-color: $whitegreen;
+      background-color: $white;
     }
     // &-track{
     //   background-color: rgba($color: #000000, $alpha: .1);
@@ -41,7 +42,7 @@ img{
 }
 
 .caption{
-  color: $whitegreen;
+  color: $white;
   &::selection{
     color: $black;
   }
@@ -51,7 +52,7 @@ img{
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  color: $whitegreen;
+  color: $white;
   font: $font-highlight;
   text-decoration: none;
   position: relative;
@@ -66,7 +67,7 @@ img{
     width: 100%;
     height: 3px;
     border-radius: 2px;
-    background-color: $whitegreen;
+    background-color: $white;
     position: absolute;
     left: 0;
     bottom: -4px;
@@ -129,15 +130,17 @@ img{
   }
 }
 
-
 .highlight{
-  color: $whitegreen;
+  color: $white;
   font: $font-highlight;
   &::selection{
     color: $black;
   }
 }
 
+p{
+  line-height: 1.4em;
+}
 
 @media screen and (max-width: 425px){
   .logo_container{
