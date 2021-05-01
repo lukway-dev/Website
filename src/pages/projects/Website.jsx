@@ -8,13 +8,13 @@ const project = {
   images: [
     {
       id: 0,
-      image: '../images/projects/personal_web/home.jpg'
+      image: '../images/projects/personal_web/home.png'
     }, {
       id: 1,
-      image: '../images/projects/personal_web/about.jpg'
+      image: '../images/projects/personal_web/about.png'
     }, {
       id: 2,
-      image: '../images/projects/personal_web/potfolio.jpg'
+      image: '../images/projects/personal_web/portfolio.png'
     }
   ],
   items: [

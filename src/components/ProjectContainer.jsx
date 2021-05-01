@@ -4,7 +4,7 @@ const projects = [
   {
     id: 1,
     title: 'Página Personal',
-    image: 'images/projects/personal_web/home.jpg',
+    image: 'images/projects/personal_web/home.png',
     path: '/portfolio/website',
     redirect: 'https://www.lukway.site',
     github: 'https://github.com/Lukway-developer/Website'
