@@ -7,6 +7,7 @@ import Portfolio from './pages/Portfolio'
 import Website from './pages/projects/Website'
 import MemoryGame from './pages/projects/MemoryGame'
 import JavaScriptQuiz from './pages/projects/JavaScriptQuiz'
+import SkalaEcommerce from './pages/projects/SkalaEcommerce'
 
 const Routes = () => {
   return (
@@ -17,6 +18,7 @@ const Routes = () => {
         <Route exact path='/portfolio' component={Portfolio} />
         <Route exact path='/portfolio/website' component={Website} />
         <Route exact path='/portfolio/memory_game' component={MemoryGame} />
+        <Route exact path='/portfolio/skala_ecommerce' component={SkalaEcommerce} />
         <Route exact path='/portfolio/javascript_quiz' component={JavaScriptQuiz} />
         {/* <Route component={Error_404} /> */}
       </Switch>
