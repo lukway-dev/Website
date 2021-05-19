@@ -1,4 +1,4 @@
-# Lukway Website ![Lukway Logo](images/lukway/icon.svg "Lukway Logo")
+# Lukway Website <img src="images/lukway/logo.svg" alt="Lukway Logo" title="Lukway Logo" height=20/>
 You can see this project here [Lukway Website](https://www.lukway.site/).
 
 ## Content
@@ -12,9 +12,9 @@ You can see this project here [Lukway Website](https://www.lukway.site/).
 
 ### `Preview`
 
-![Skala Logo](https://github.com/Lukway-developer/Projects-Images/blob/master/personal_web/home.png "Preview 1")
-![Skala Logo](https://github.com/Lukway-developer/Projects-Images/blob/master/personal_web/about.png"Preview 2")
-![Skala Logo](https://github.com/Lukway-developer/Projects-Images/blob/master/personal_web/portfolio.png"Preview 3")
+![Lukway Website Preview](https://github.com/Lukway-developer/Projects-Images/blob/master/personal_web/home.png "Preview 1")
+![Lukway Website Preview](https://github.com/Lukway-developer/Projects-Images/blob/master/personal_web/about.png "Preview 2")
+![Lukway Website Preview](https://github.com/Lukway-developer/Projects-Images/blob/master/personal_web/portfolio.png "Preview 3")
 
 ### `About Lukway`
 
