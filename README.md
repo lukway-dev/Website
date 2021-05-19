@@ -1,4 +1,4 @@
-# Lukway Website <img src="https://github.com/Lukway-developer/Website/tree/gh-pages/images/lukway/logo.svg" alt="Lukway Logo" title="Lukway Logo" height=20/>
+# Lukway Website <img src="https://github.com/Lukway-developer/Website/blob/gh-pages/images/lukway/favicon.svg" alt="Lukway Logo" title="Lukway Logo" height=20/>
 You can see this project here [Lukway Website](https://www.lukway.site/).
 
 ## Content
